@@ -7,4 +7,13 @@ fun main(args: Array<String>) {
 
     // Chars in the '
     println('A')
+
+    var url: String = "https://google.com"
+    println(url)
+
+    var sentence: String = "My cat’s name is \"Fluffy\""
+    println(sentence)
+
+    var sentence2: String = "The type of slash are: \\ and /"
+    println(sentence2)
 }
