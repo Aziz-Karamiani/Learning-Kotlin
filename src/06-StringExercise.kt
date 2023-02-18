@@ -15,4 +15,9 @@ fun main(args: Array<String>) {
     val number1 = 12
     val number2 = 13
     println("12 + 13 = ${number1 + number2}")
+
+    val client = "Mary"
+    val products = 3
+    val price = 30
+    println("Mary Total Cost Is 3 * 30 = ${90}\$")
 }
