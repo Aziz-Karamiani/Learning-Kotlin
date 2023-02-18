@@ -16,4 +16,10 @@ fun main(args: Array<String>) {
 
     var sentence2: String = "The type of slash are: \\ and /"
     println(sentence2)
+
+    // Draw bunny
+    println("(\\(\\")
+    println("(-.-)")
+    println("O_(\") (\")")
+
 }
