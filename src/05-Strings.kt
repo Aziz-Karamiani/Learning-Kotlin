@@ -8,13 +8,13 @@ fun main(args: Array<String>) {
     // Chars in the '
     println('A')
 
-    var url: String = "https://google.com"
+    val url: String = "https://google.com"
     println(url)
 
-    var sentence: String = "My cat’s name is \"Fluffy\""
+    val sentence: String = "My cat’s name is \"Fluffy\""
     println(sentence)
 
-    var sentence2: String = "The type of slash are: \\ and /"
+    val sentence2: String = "The type of slash are: \\ and /"
     println(sentence2)
 
     // Draw bunny
@@ -22,4 +22,16 @@ fun main(args: Array<String>) {
     println("(-.-)")
     println("O_(\") (\")")
 
+    // String Functions
+    var str = "this is a kotlin program."
+    println(str.length)
+    println(str.capitalize())
+    str = "This Is A Kotlin Program."
+    println(str.decapitalize())
+
+    println(str.toUpperCase())
+    println(str.toLowerCase())
+
+    println(str.substring(3))
+    println(str.substring(3, 6))
 }
