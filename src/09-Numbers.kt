@@ -15,6 +15,12 @@ fun main(args: Array<String>) {
     val grade = 19.7
     println(grade::class.java)
 
-    val pi = 3.1415678654
+    val pi = 3.1415
     println(pi::class.java)
+
+     println("Enter a number: ")
+    val radius = readLine()?:""
+    val s = 2 * pi * radius.toInt()
+    println(s)
+    println(s::class.java)
 }
