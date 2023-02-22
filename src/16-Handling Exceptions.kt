@@ -10,4 +10,13 @@ fun main(args: Array<String>) {
         e.printStackTrace()
         println("Error : ${e.localizedMessage}")
     }
+
+    val test = readLine()
+    try {
+        println(test?.toInt())
+    } catch (e: Exception) {
+        println("An exception has occurred\n${e.localizedMessage}")
+    } finally {
+        println("The execution has completed")
+    }
 }
