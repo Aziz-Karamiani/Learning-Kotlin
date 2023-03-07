@@ -5,12 +5,13 @@ import kotlin.random.Random
 const val numberOfGuess = 6
 var currentNumberOfWrongGuess = 0
 val words = listOf("Tiger", "Dog", "Cat", "Donkey", "Elephant", "Giraffe", "Camel", "Zebra", "Rabbit", "Snake", "Cow")
+var guessedWord = ""
 
 fun main(args: Array<String>) {
     println(words)
     val word = words[Random.nextInt(words.size) - 1]
-    println(guessWord(word))
     println("Start the game...")
+    print(guessWord(word, '_'))
     while (currentNumberOfWrongGuess < numberOfGuess) {
         val ch = typeALetter()
         var isOk = false
@@ -19,9 +20,13 @@ fun main(args: Array<String>) {
                 isOk = true
         }
 
+        guessWord(word, ch)
+        println(guessedWord)
+
         if (!isOk) {
             currentNumberOfWrongGuess++
         }
+        validateResponse()
     }
 }
 
@@ -29,11 +34,16 @@ fun typeALetter(): Char {
     return readLine()!!.single()
 }
 
-fun guessWord(word: String): String {
+fun guessWord(word: String, ch: Char): String {
     var str = ""
     for (i in word.indices) {
-        str += "_ "
+        str += if (ch == word[i]) {
+            ch.toUpperCase()
+        } else {
+            "_"
+        }
     }
+    guessedWord = str
     return str
 }
 
