@@ -59,25 +59,22 @@ fun checkWinner(player: Boolean): Boolean {
         // Horizontal
         if (board[i][0] == playerSymbol && board[i][1] == playerSymbol && board[i][2] == playerSymbol) {
             won = true
-            return won
+            break
         }
 
         // Vertical
         if (board[0][i] == playerSymbol && board[1][i] == playerSymbol && board[2][i] == playerSymbol) {
             won = true
-            return won
+            break
         }
     }
 
-    if (board[0][0] == playerSymbol && board[1][1] == playerSymbol && board[2][2] == playerSymbol) {
+    if (board[0][0] == playerSymbol && board[1][1] == playerSymbol && board[2][2] == playerSymbol)
         won = true
-        return won
-    }
 
-    if (board[2][0] == playerSymbol && board[1][1] == playerSymbol && board[0][2] == playerSymbol) {
+
+    if (board[2][0] == playerSymbol && board[1][1] == playerSymbol && board[0][2] == playerSymbol)
         won = true
-        return won
-    }
 
     return won
 }
