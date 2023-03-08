@@ -26,6 +26,10 @@ fun main(args: Array<String>) {
             } else {
                 board[x - 1][y - 1] = "X"
                 printBoard()
+                if (checkWinner(true)) {
+                    println("You Won.")
+                    continueGame = false
+                }
             }
         } catch (e: Exception) {
             println("Invalid input, please try again.")
@@ -46,4 +50,34 @@ fun printBoard() {
         println("|")
         println("-------------")
     }
+}
+
+fun checkWinner(player: Boolean): Boolean {
+    var won = false
+    val playerSymbol = if (player) "X" else "O"
+    for (i in 0..2) {
+        // Horizontal
+        if (board[i][0] == playerSymbol && board[i][1] == playerSymbol && board[i][2] == playerSymbol) {
+            won = true
+            return won
+        }
+
+        // Vertical
+        if (board[0][i] == playerSymbol && board[1][i] == playerSymbol && board[2][i] == playerSymbol) {
+            won = true
+            return won
+        }
+    }
+
+    if (board[0][0] == playerSymbol && board[1][1] == playerSymbol && board[2][2] == playerSymbol) {
+        won = true
+        return won
+    }
+
+    if (board[2][0] == playerSymbol && board[1][1] == playerSymbol && board[0][2] == playerSymbol) {
+        won = true
+        return won
+    }
+
+    return won
 }
