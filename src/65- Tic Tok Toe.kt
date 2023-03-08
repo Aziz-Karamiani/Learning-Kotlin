@@ -29,6 +29,9 @@ fun main(args: Array<String>) {
                 if (checkWinner(true)) {
                     println("You Won.")
                     continueGame = false
+                } else {
+                    if (checkBoardFull())
+                        continueGame = false
                 }
             }
         } catch (e: Exception) {
@@ -77,4 +80,18 @@ fun checkWinner(player: Boolean): Boolean {
         won = true
 
     return won
+}
+
+
+fun checkBoardFull(): Boolean {
+    var full = true
+    for (i in 0..2) {
+        for (j in 0..2) {
+            if (board[i][j] == "") {
+                full = false
+                break
+            }
+        }
+    }
+    return full
 }
