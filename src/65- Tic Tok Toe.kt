@@ -1,5 +1,7 @@
 package main
 
+import kotlin.random.Random
+
 var board = arrayListOf<ArrayList<String>>()
 
 fun main(args: Array<String>) {
@@ -30,9 +32,19 @@ fun main(args: Array<String>) {
                     println("You Won.")
                     continueGame = false
                 } else {
-                    if (checkBoardFull())
+                    if (checkBoardFull()) {
                         continueGame = false
+                        break
+                    }
+                    placeComputerMove()
+                    printBoard()
+                    if (checkWinner(false)) {
+                        println("Computer Won.")
+                        continueGame = false
+                    }
                 }
+
+
             }
         } catch (e: Exception) {
             println("Invalid input, please try again.")
@@ -94,4 +106,15 @@ fun checkBoardFull(): Boolean {
         }
     }
     return full
+}
+
+
+fun placeComputerMove() {
+    var i = 0
+    var j = 0
+    do {
+        i = Random.nextInt(3)
+        j = Random.nextInt(3)
+    } while (board[i][j] != "")
+    board[i][j] = "O"
 }
