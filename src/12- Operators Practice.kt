@@ -22,6 +22,6 @@ fun main(args: Array<String>) {
 
     println("Please Enter Your Amount In Bank Accounts?")
     val credit = readLine()?:""
-    val amountAfter5Year = (credit.toDouble() * (Math.pow(5.5/100, 5.0) - 1))/ (5.5/100 - 1)
-    println("Your Amount In Bank Accounts After 5 Years Is : $amountAfter5Year")
+//    val amountAfter5Year = (credit.toDouble() * (Math.pow(5.5/100, 5.0) - 1))/ (5.5/100 - 1)
+//    println("Your Amount In Bank Accounts After 5 Years Is : $amountAfter5Year")
 }
