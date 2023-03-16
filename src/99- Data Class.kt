@@ -1,8 +1,8 @@
 fun main(args: Array<String>) {
-    val user = User("Aziz", "Password")
-    println(user)
-    println(user::class.java)
+    val user2 = User2("Aziz", "Password")
+    println(user2)
+    println(user2::class.java)
 }
 
-data class User(val userName: String, val password: String)
+data class User2(val userName: String, val password: String)
 
