@@ -1,5 +1,3 @@
-package main
-
 fun main(args: Array<String>) {
     /*
         Your company has very strict dress code. Only certain color clothes can be worn in the office.

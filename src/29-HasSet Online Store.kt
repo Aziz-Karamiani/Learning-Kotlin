@@ -1,10 +1,8 @@
-package main
-
 fun main(args: Array<String>) {
     /*
         Create an hasSet of online users for your website.
-        add new logged in user to online lists.
-        remove signed out user from online lists.
+        add new logged-in user to online lists.
+        remove signed-out user from online lists.
      */
     val onlineUsers = hashSetOf("Aziz", "Meysam", "Matin")
     println("Online users $onlineUsers")
